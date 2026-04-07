@@ -21,5 +21,10 @@ CREATE TABLE games (
   opponent_goals INT NOT NULL
 );
 
+GRANT ALL PRIVILEGES ON ALL TABLES IN SCHEMA public TO freecodecamp;
+GRANT ALL PRIVILEGES ON ALL SEQUENCES IN SCHEMA public TO freecodecamp;
+ALTER TABLE games OWNER TO freecodecamp;
+ALTER TABLE teams OWNER TO freecodecamp;
+
 -- Exit the psql terminal
 \q
